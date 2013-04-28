@@ -5,42 +5,25 @@
 
     <groupId>eu.icya.productivity</groupId>
     <artifactId>swashplate</artifactId>
-<packaging>jar</packaging>
-<name>Swashplate</name>
+    <packaging>jar</packaging>
+    <name>Swashplate</name>
     <version>1.0-SNAPSHOT</version>
 
-  <modelVersion>4.0.0</modelVersion>
+    <modelVersion>4.0.0</modelVersion>
 
-  <dependencies>
-    <dependency>
-      <groupId>org.slf4j</groupId>
-      <artifactId>slf4j-api</artifactId>
-    </dependency>
+    <dependencies>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.5</version>
+        </dependency>
 
-    <dependency>
-      <groupId>log4j</groupId>
-      <artifactId>log4j</artifactId>
-    </dependency>
-  </dependencies>
-
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-jar-plugin</artifactId>
-        <configuration>
-          <archive>
-            <manifestEntries>
-              <Bundle-Version>${parsedVersion.osgiVersion}</Bundle-Version>
-              <Bundle-Description>${project.description}</Bundle-Description>
-              <Implementation-Version>${project.version}</Implementation-Version>
-            </manifestEntries>
-            <manifestFile>${project.build.outputDirectory}/META-INF/MANIFEST.MF</manifestFile>
-          </archive>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.7.5</version>
+        </dependency>
+    </dependencies>
 
 </project>
 
